@@ -1,3 +1,5 @@
+// without using matrices. The solution logic is simlar to Elimination Game prob logic
+
 class Solution {
     public String convert(String s, int numRows) {
        
