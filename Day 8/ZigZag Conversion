@@ -1,4 +1,4 @@
-// without using matrices. The solution logic is simlar to Elimination Game prob logic
+// without using matrices. The solution logic is simlar to Elimination Game prob logic. on day 9 we might get a optimized matrix solution.
 
 class Solution {
     public String convert(String s, int numRows) {
