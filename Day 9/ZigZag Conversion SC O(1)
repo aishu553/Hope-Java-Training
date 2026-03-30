@@ -1,0 +1,23 @@
+class Solution {
+    public String convert(String s, int numRows) {
+       if (numRows == 1 || numRows >= s.length()) return s;
+
+        StringBuilder result = new StringBuilder();
+        int n = s.length();
+        int cycle = 2 * numRows - 2; //theres two op we do in here. Down and diagonally up. 
+        //down=0->numRows (i.e) down=numRows and up=numRows-2. So down + up is 2*numRows-2
+
+        for (int row = 0; row < numRows; row++) {
+            for (int j = row; j < n; j += cycle) {
+
+                result.append(s.charAt(j));
+                int diag = j + cycle - 2 * row;
+                if (row != 0 && row != numRows - 1 && diag < n) {
+                    result.append(s.charAt(diag));
+                }
+            }
+        }
+
+        return result.toString();
+    }
+}
