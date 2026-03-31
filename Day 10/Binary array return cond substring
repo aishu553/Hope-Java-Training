@@ -1,26 +1,56 @@
+//Given a binary array (0s and 1s), return the largest contiguous subarray where
+//count(1) = count(0) + 1
+
+/*
+💡 Idea (simple words)
+Convert 0 → -1
+Then:
+count(1) - count(0) = 1 → becomes subarray sum = 1
+
+Use prefix sum
+Use array instead of HashMap
+
+*/
+
 class Codechef
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		int[] nums={1,0,1,1,0,1,0};
-		int maxlen=0;
-		int start=-1;
-		int end=-1;
+		// Input array
+		int[] nums = {1, 0, 1, 1, 0, 1, 0};
 
-		for(int i=0;i<nums.length;i++){
-		    int ones=0;
-		    int zeroes=0;
+		// To store max length of valid subarray
+		int maxlen = 0;
 
-		    for(int j=i;j<nums.length;j++){
-		        if(nums[j]==1){
+		// To store starting and ending index of answer
+		int start = -1;
+		int end = -1;
+
+		// Step 1: Fix starting index of subarray
+		for(int i = 0; i < nums.length; i++){
+
+		    int ones = 0;    // count of 1s
+		    int zeros = 0;   // count of 0s
+
+		    // Step 2: Expand subarray from i → j
+		    for(int j = i; j < nums.length; j++){
+
+		        // Count 1s and 0s
+		        if(nums[j] == 1){
 		            ones++;
 		        }
 		        else{
-		            zeroes++;
+		            zeros++;
 		        }
 
-		        if(ones==zeroes+1){
+		        // Step 3: Check condition
+		        // number of 1s should be exactly one more than 0s
+		        if(ones == zeros + 1){
+
+		            // Calculate length of current subarray
 		            int len = j - i + 1;
+
+		            // Update max length if needed
 		            if(len > maxlen){
 		                maxlen = len;
 		                start = i;
@@ -30,8 +60,15 @@ class Codechef
 		    }
 		}
 
-		for(int i=start;i<=end;i++){
-		    System.out.print(nums[i]+" ");
+		// Step 4: Print result
+		if(start == -1){
+		    System.out.println("No valid subarray found");
+		}
+		else{
+		    System.out.print("Output: ");
+		    for(int i = start; i <= end; i++){
+		        System.out.print(nums[i] + " ");
+		    }
 		}
 	}
 }
