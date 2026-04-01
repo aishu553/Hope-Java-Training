@@ -51,7 +51,7 @@ Problems are organized day-wise to track consistency, progress, and improvement 
 
 | Day | Topics Covered | Problems |
 |-----|--------------|---------|
-| Day 01 | Arrays | 1 |
+| Day 01 || 1 |
 | Day 02 | TBD | TBD |
 
 ---
