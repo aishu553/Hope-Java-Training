@@ -1,0 +1,49 @@
+// Parent class
+class Delivery {
+    
+    // Common method (will be overridden)
+    void deliver() {
+        System.out.println("Delivering package");
+    }
+}
+
+// Child class 1
+class StandardDelivery extends Delivery {
+    
+    void deliver() {
+        System.out.println("Standard Delivery: Delivered in 5-7 days");
+    }
+}
+
+// Child class 2
+class ExpressDelivery extends Delivery {
+    
+    void deliver() {
+        System.out.println("Express Delivery: Delivered in 2-3 days");
+    }
+}
+
+// Child class 3
+class SameDayDelivery extends Delivery {
+    
+    
+    void deliver() {
+        System.out.println("Same Day Delivery: Delivered within 24 hours");
+    }
+}
+
+// Main class
+public class AmazonDelivery {
+    public static void main(String[] args) {
+        
+        // Parent reference, child objects (Polymorphism)
+        Delivery d1 = new StandardDelivery();
+        Delivery d2 = new ExpressDelivery();
+        Delivery d3 = new SameDayDelivery();
+
+        // Same method call, different behavior
+        d1.deliver();
+        d2.deliver();
+        d3.deliver();
+    }
+}
