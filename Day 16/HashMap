@@ -1,0 +1,25 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+	    Map<Integer,String> hm=new HashMap<>();
+	    map.put(1,"hi");
+	    map.put(2,"hello");
+	    map.put(3,"bye");
+	    
+	    System.out.println(map);
+	    map.put(3,"bywwwe");
+	    System.out.println(map);
+	    map.remove(1);
+	    System.out.println(map);
+	    System.out.println(map.get(3));
+	    System.out.println(map.containsKey());
+	    System.out.println(map);
+	    
+	}
+}

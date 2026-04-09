@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Main{
+    public static void main (String[] args) throws java.lang.Exception
+	{
+	    Map<Integer,String> hm=new HashMap<>();
+	    Map<Integer,String> lhm=new LinkedHashMap<>();
+	    Map<Integer,String> tm=new TreeMap<>();
+	    int[] arr={50,20,30};
+	    for(int a:arr){
+	        hm.put(a,"A");
+	        lhm.put(a,"A");
+	        tm.put(a,"A");
+	    }
+	    System.out.println(hm); //{50=A, 20=A, 30=A}
+	    System.out.println(lhm); // {50=A, 20=A, 30=A}
+	    System.out.println(tm); // {20=A, 30=A, 50=A}
+	}
+}
