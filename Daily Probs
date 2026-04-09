@@ -1,0 +1,15 @@
+// Daily Assesment questions (started from day 8)
+
+1. Count and Say
+2. Zig Zag Conversion
+3. Binary array return cond Substring
+4. Longest Mountain Subarray
+5. Leaders in an Array ✨
+6. Mirror String (return the llongest substring that is a Palindrome)
+7. Rotate array by k
+8. A collection of pairs of elements that are intervals in a format of [[start1,end1],[start2,end2],...] is given.
+    Merge the intervals that are overlapping and return all the final intervals.
+    eg:
+       i/p: [[1,4],[2,3],[6,9],[9,14]]
+       o/p: [[1,4],[6,14]]
+9. Given a string, return the characters in that string uniquly in the order of their frequency in that string
