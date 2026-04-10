@@ -1,0 +1,45 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Collections
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// Collections
+		List<Integer> list=new ArrayList<>();
+        list.add(20);
+        list.add(11);
+        list.add(30);
+        list.add(20);
+        list.add(40);
+        //Sorting
+        Collections.sort(list);
+        System.out.println(list);//[11, 20, 20, 30, 40]
+
+        //Binary search
+        int index=Collections.binarySearch(list,20);
+        System.out.println(index);//2
+
+        //Frequency
+        int count=Collections.frequency(list,20);
+        System.out.println(count);//2
+
+        //Reversing
+        Collections.reverse(list);
+        System.out.println(list);//[40, 30, 20, 20, 11]
+
+        //Min element
+        int min=Collections.min(list);
+        System.out.println(min);//11
+
+        //Max element
+        int max=Collections.max(list);
+        System.out.println(max);//40
+
+        //Shuffling
+        Collections.shuffle(list);
+        System.out.println(list);//[30, 20, 40, 11, 20]
+        
+	}
+}

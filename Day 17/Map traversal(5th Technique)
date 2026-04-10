@@ -1,0 +1,34 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// Map traversal (6th Technique of Traversal)
+        Map<Integer,String> map=new HashMap<>();
+        map.put(1,"A");
+        map.put(2,"B");
+        map.put(3,"C");
+        //entry set
+        System.out.println("entry set");
+        for(Map.Entry<Integer,String> e:map.entrySet()){
+            System.out.println(e.getKey()+" "+e.getValue());
+        }
+
+        //using key set, printing the values only
+        System.out.println("key set");
+        for(Integer a:map.keySet()){
+            System.out.print(map.get(a)+" ");
+        }
+        
+        //using key set, printing key only
+        System.out.println();
+        System.out.println("to print key only");
+        for(Integer a:map.keySet()){
+            System.out.print(a+" ");
+        }
+        
+	}
+}
