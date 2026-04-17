@@ -18,10 +18,10 @@ public class Main{
     }
 
   catch(IOException e){
-    e.StackTrace();
+    e.printStackTrace();
   }
   catch(Exception e){
-    e.StackTrace();
+    e.printStackTrace();
   }
   }
 }
