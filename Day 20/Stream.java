@@ -1,4 +1,5 @@
 import java.io.*;
+import java.io.Exception;
 
 public class Main{
   public static void main(String[] args){
@@ -17,4 +18,11 @@ public class Main{
     }
 
   catch(IOException e){
+    e.StackTrace();
+  }
+  catch(Exception e){
+    e.StackTrace();
+  }
+  }
+}
     
